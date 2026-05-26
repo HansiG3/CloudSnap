@@ -1,45 +1,42 @@
-CloudSnap
+# CloudSnap
 
 A cloud-based image upload and sharing platform built using the MERN stack and Cloudinary. Users can upload, store, and view images securely through a responsive web interface.
 
+---
 
-Features
+# Features
 
-Upload images from local device
-Store images securely on Cloudinary
-Save image metadata in MongoDB Atlas
-Display uploaded images dynamically
-REST API integration using Express.js
-Responsive frontend built with React
+- Upload images from local device
+- Store images securely on Cloudinary
+- Save image metadata in MongoDB Atlas
+- Display uploaded images dynamically
+- REST API integration using Express.js
+- Responsive frontend built with React
 
+---
 
-Tech Stack
+# Tech Stack
 
-Frontend
+## Frontend
+- React.js
+- Axios
 
-React.js
+## Backend
+- Node.js
+- Express.js
+- Multer
 
-Axios
+## Database
+- MongoDB Atlas
 
-Backend
+## Cloud Storage
+- Cloudinary
 
-Node.js
+---
 
-Express.js
+# Project Architecture
 
-Multer
-
-Database
-
-MongoDB Atlas
-
-Cloud Storage
-
-Cloudinary
-
-
-Project Architecture
-
+```text
 Frontend (React)
        ↓
 Backend API (Express)
@@ -47,58 +44,59 @@ Backend API (Express)
 Cloudinary (Image Storage)
        ↓
 MongoDB Atlas (Stores Image URLs)
+```
 
+---
 
-Folder Structure
+# Folder Structure
 
+```text
 CloudSnap/
 │
-
 ├── backend/
-
 │   ├── config/
-
 │   ├── models/
-
 │   ├── routes/
-
 │   ├── server.js
-
 │   └── .env
-
 │
 ├── frontend/
-
 │   ├── src/
-
 │   ├── public/
-
 │   └── package.json
-
 │
 └── README.md
+```
 
+---
 
+# Installation & Setup
 
-Installation & Setup
+## 1. Clone Repository
 
-1. Clone Repository
-
+```bash
 git clone <your-repository-url>
+```
 
+---
 
-2. Backend Setup
+# 2. Backend Setup
 
-2.1 Navigate to backend
+## 2.1 Navigate to backend
 
+```bash
 cd backend
+```
 
-2.2 Install dependencies
+## 2.2 Install dependencies
 
+```bash
 npm install
+```
 
-2.3 Create .env
+## 2.3 Create `.env`
 
+```env
 MONGO_URI=your_mongodb_connection_string
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
@@ -106,99 +104,113 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 
 CLOUDINARY_API_SECRET=your_api_secret
+```
 
-2.4 Run backend server
+## 2.4 Run backend server
 
+```bash
 npm run dev
+```
 
+---
 
-3. Frontend Setup
+# 3. Frontend Setup
 
-3.1 Navigate to frontend
+## 3.1 Navigate to frontend
 
+```bash
 cd frontend
+```
 
-3.2 Install dependencies
+## 3.2 Install dependencies
 
+```bash
 npm install
+```
 
-3.3 Start frontend
+## 3.3 Start frontend
 
+```bash
 npm run dev
+```
 
+---
 
-API Endpoints
+# API Endpoints
 
-Upload Image
+## Upload Image
 
+```http
 POST /api/images/upload
+```
 
-Get All Images
+## Get All Images
 
+```http
 GET /api/images
+```
 
+---
 
-How It Works
+# How It Works
 
-User selects an image from frontend
+1. User selects an image from frontend
+2. React sends image to backend using Axios
+3. Multer processes uploaded file
+4. Backend uploads image to Cloudinary
+5. Cloudinary returns image URL
+6. MongoDB stores image URL
+7. Frontend fetches and displays uploaded images
 
-React sends image to backend using Axios
+---
 
-Multer processes uploaded file
+# Screenshots
 
-Backend uploads image to Cloudinary
+## Home Page
 
-Cloudinary returns image URL
+![Home Page](https://github.com/user-attachments/assets/85de3c58-82e4-4a33-817c-0914518cfa0d)
 
-MongoDB stores image URL
+## Upload Section
 
-Frontend fetches and displays uploaded images 
+![Upload Section](https://github.com/user-attachments/assets/11bb5bd9-0768-419d-988d-a69c5c2edef1)
 
-Screenshots
+## Uploaded Images
 
-<img width="1900" height="859" alt="image" src="https://github.com/user-attachments/assets/85de3c58-82e4-4a33-817c-0914518cfa0d" />
-<img width="1917" height="914" alt="image" src="https://github.com/user-attachments/assets/11bb5bd9-0768-419d-988d-a69c5c2edef1" />
-<img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/1290a5e2-6d09-4a3f-9ca5-2d354980d7c5" />
+![Uploaded Images](https://github.com/user-attachments/assets/1290a5e2-6d09-4a3f-9ca5-2d354980d7c5)
 
-Future Improvements
+---
 
-User authentication
+# Future Improvements
 
-Image deletion
+- User authentication
+- Image deletion
+- Drag & drop upload
+- Multiple image upload
+- Private galleries
+- Search functionality
 
-Drag & drop upload
+---
 
-Multiple image upload
-
-Private galleries
-
-Search functionality
-
-
-Learning Outcomes
+# Learning Outcomes
 
 This project helped in understanding:
 
-MERN stack integration
+- MERN stack integration
+- REST APIs
+- File uploads using Multer
+- Cloud storage concepts
+- MongoDB Atlas integration
+- React hooks (`useState`, `useEffect`)
+- Axios for API communication
 
-REST APIs
+---
 
-File uploads using Multer
+# Author
 
-Cloud storage concepts
+**Hansi Gupta**
 
-MongoDB Atlas integration
+---
 
-React hooks (useState, useEffect)
-
-Axios for API communication
-
-
-Author
-
-Hansi Gupta
-
-
-License
+# License
 
 This project is created for educational and learning purposes.
